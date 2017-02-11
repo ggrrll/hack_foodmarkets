@@ -66,8 +66,44 @@ Product.prototype = {
 /*----------------------------------------------------------------------------------*/
 // >>>> DB PARAMS <<<<
 
+function test(data) {
+        console.log(data);
+    
+    var select = [];
+    
+    for (var i in data) {
+        if (data[i]["common_name"] != null) {
+            if (data[i]["common_name"].indexOf("Banana") != -1) {
+                 var product = new Product(data[i]);
+                select.push(product);
+            }
+        }
+    }
+    
+    select[0].appendToContainer('<div class="yz_heart"><img src="img/heart-color.png" width="15" align="left"/><p>'+GLB_randomIntFromInterval(120,1200)+'<p></div><p class="txtOnly">One banana contains only 105 calories</p>');
+    
+    select[0].showImage();
+    select[0].appendToContainer('<div class="yz_heart"><img src="img/heart-color.png" width="15" align="left"/><p>'+GLB_randomIntFromInterval(120,1200)+'<p></div><p class="txtOnly">Bananas are grown in 335 countries</p>');
+    select[1].showImage();
+    select[2].showImage();
+ 
 
-$.getJSON( "js/data.js", function( data ) {
+}
+var data;
+
+$.ajax({
+  dataType: "json",
+  url: "js/data.js",
+  data: data,
+  success: test
+});
+
+
+
+// $.getJSON( "js/data.js", function( data ) {
+/*
+$.get( "js/data.js", function( data ) {
+    console.log(data);
     
     var select = [];
     
@@ -88,6 +124,7 @@ $.getJSON( "js/data.js", function( data ) {
     select[2].showImage();
  
 });
+*/
 
 
 
