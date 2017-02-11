@@ -379,11 +379,54 @@ body {
     margin:0;
    float:left;
 }
-#yz-product-infosBoxes > .container {
+.container {
+    position:relative;
     padding:0;
     margin:auto;
     margin-top:20px;
     width: 1024px;
 }
+#prdcts_bottom {
+    position:relative;
+    padding:0;
+    margin:auto;
+    width: 1024px;
+    height:50px;
+    margin-bottom:100px;
+}
+#prdcts_bottom h1 {
+    width:100%;
+    padding:0;
+    margin:0;
+    float:left;
+}
+#yz_srch {
+    width:100%;
+    padding:0;
+    margin:0;
+    margin-top:30px;
+    float:left;
+}
+#yz_forum {
+    width:480px;
+    padding:0;
+    margin:0;
+    float:left;
+}
+#yz_forum > .bloc {
+    width:471px;
+    padding:0;
+    margin:0;
+    padding-bottom:30px;
+ }
+#yz_map {
+    width:471px;
+    padding:0;
+    margin:0;
+    padding-bottom:30px;
+    margin-left: 50px;
+    float:left;
+}
+
 
 
